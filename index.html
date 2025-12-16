@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Clicker</title>
+    <script src="https://cdn.jsdelivr.net/npm/facilejs/facile.umd.js"></script>
+</head>
+<body>
+    <div>
+        <p>Ressource 1</p>
+        <p>Ressource 2</p>
+        <p>Ressource 3</p>
+    </div>
+
+    <div>
+        <p>Planète 1</p>
+        <p>Planète 2</p>
+        <p>Planète 3</p>
+    </div>
+
+    <div>
+        <h2>Boutique</h2>
+        <p id="amelioration-1">Amélioration 1</p>
+    </div>
+
+    <h1>Count: <span id="count">0</span></h1>
+    <button id="cookie">COOKIE</button>
+
+    <script>
+        var clickCount = 0;
+
+        facile.onClick('#cookie', () => {
+            clickCount = clickCount + 1
+            facile.write("#count", clickCount)
+        })
+
+        facile.write('#amelioration-1', 'Améliorer planète 1');
+    </script>
+</body>
+</html>
