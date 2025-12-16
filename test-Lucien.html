@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Clicker</title>
+    <script src="https://cdn.jsdelivr.net/npm/facilejs/facile.umd.js"></script>
+</head>
+<body>
+    <h1 id="planet">Planet Clicker</h1>
+
+<h2>Count Pierre: <span id='countPierre'>0</span></h2>
+<button id='Planet-Pierre'>Planet Pierre</button>
+
+<h2>Count Bois: <span id='countBois'>0</span></h2>
+<button id='Planet-Bois'>Planet Bois</button>
+
+<h2>Count Eau: <span id='countEau'>0</span></h2>
+<button id='Planet-Eau'>Planet Eau</button>
+
+<h2>Count Charbon: <span id='countCharbon'>0</span></h2>
+<button id='Planet-Charbon'>Planet Charbon</button>
+
+<h2>Count Fer: <span id='countFer'>0</span></h2>
+<button id='Planet-Fer'>Planet Fer</button>
+
+<h2>Count Uranium: <span id='countUranium'>0</span></h2>
+<button id='Planet-Uranium'>Planet Uranium</button>
+
+<h2>Count Obsdienne: <span id='countObsidienne'>0</span></h2>
+<button id='Planet-Obsidienne'>Planet Obsidienne</button>
+
+<h2>Count Diamant: <span id='countDiamant'>0</span></h2>
+<button id='Planet-Diamant'>Planet Diamant</button>
+
+    <script>
+        var clickCountPierre = 0;
+
+        facile.onClick('#Planet-Pierre',() => {
+            clickCountPierre = clickCountPierre + 1
+            facile.write('#countPierre', clickCountPierre)
+        })
+        
+        var clickCountBois  = 0;
+
+        facile.onClick('#Planet-Bois',() => {
+            clickCountBois = clickCountBois + 1
+            facile.write('#countBois', clickCountBois)
+        })
+
+        var clickCountEau = 0
+
+        facile.onClick('#Planet-Eau',() => {
+            clickCountEau = clickCountEau + 1
+            facile.write('#countEau', clickCountEau)
+        })
+
+        var clickCountCharbon = 0
+
+        facile.onClick('#Planet-Charbon',() => {
+            clickCountCharbon = clickCountCharbon + 1
+            facile.write('#countCharbon', clickCountCharbon)
+        })
+
+        var clickCountFer = 0
+
+        facile.onClick('#Planet-Fer',() => {
+            clickCountFer = clickCountFer + 1
+            facile.write('#countFer', clickCountFer)
+        })
+
+        var clickCountUranium = 0
+
+        facile.onClick('#Planet-Uranium',() => {
+           clickCountUranium = clickCountUranium + 1 
+           facile.write('#countUranium', clickCountUranium)
+        })
+
+        var clickCountObsidienne = 0
+
+        facile.onClick('#Planet-Obsidienne',() => {
+            clickCountObsidienne = clickCountObsidienne + 1
+            facile.write('#countObsidienne', clickCountObsidienne)
+        })
+
+        var clickCountDiamant = 0
+
+        facile.onClick('#Planet-Diamant',() => {
+            clickCountDiamant = clickCountDiamant + 1
+            facile.write('#countDiamant', clickCountDiamant)
+        })
+
+    </script>
+
+</body>
+</html>
