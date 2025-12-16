@@ -7,37 +7,35 @@
     <script src="https://cdn.jsdelivr.net/npm/facilejs/facile.umd.js"></script>
 </head>
 <body>
-    <div>
-        <p>Ressource 1</p>
-        <p>Ressource 2</p>
-        <p>Ressource 3</p>
-    </div>
+  
+    <h1 id="planet">Planet Clicker</h1>
 
-    <div>
-        <p>Planète 1</p>
-        <p>Planète 2</p>
-        <p>Planète 3</p>
-    </div>
+<h2>Count Pierre: <span id='countPierre'>0</span></h2>
+<button id='Planet-Pierre'>Planet Pierre</button>
 
-    <div>
-        <h2>Boutique</h2>
-        <p id="amelioration-1">Amélioration 1</p>
-    </div>
+<h2>Count Bois: <span id='countBois'>0</span></h2>
+<button id='Planet-Bois'>Planet Bois</button>
 
-    <h1>Count: <span id="count">0</span></h1>
-    <button id="cookie">COOKIE</button>
+<h2>Count Eau: <span id='countEau'>0</span></h2>
+<button id='Planet-Eau'>Planet Eau</button>
+
+<h2>Count Charbon: <span id='countCharbon'>0</span></h2>
+<button id='Planet-Charbon'>Planet Charbon</button>
+
+<h2>Count Fer: <span id='countFer'>0</span></h2>
+<button id='Planet-Fer'>Planet Fer</button>
+
+<h2>Count Uranium: <span id='countUranium'>0</span></h2>
+<button id='Planet-Uranium'>Planet Uranium</button>
+
+<h2>Count Obsdienne: <span id='countObsidienne'>0</span></h2>
+<button id='Planet-Obsidienne'>Planet Obsidienne</button>
+
+<h2>Count Diamant: <span id='countDiamant'>0</span></h2>
+<button id='Planet-Diamant'>Planet Diamant</button>
 
    <script src="evan.js"></script> 
 <script src="Lucien.js"></script>
-   <script>
-        var clickCount = 0;
 
-        facile.onClick('#cookie', () => {
-            clickCount = clickCount + 1
-            facile.write("#count", clickCount)
-        })
-
-        facile.write('#amelioration-1', 'Améliorer planète 1');
-    </script>
 </body>
 </html>
