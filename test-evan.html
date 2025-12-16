@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Clicker</title>
+    <script src="https://cdn.jsdelivr.net/npm/facilejs/facile.umd.js"></script>
+</head>
+<body>
+    <div>
+        <p>Ressource 1</p>
+        <p>Ressource 2</p>
+        <p>Ressource 3</p>
+    </div>
+
+    <div>
+        <p>Planète 1</p>
+        <p>Planète 2</p>
+        <p>Planète 3</p>
+    </div>
+
+    <div>
+        <h2>Boutique</h2>
+        <p id="amelioration-1">Amélioration 1</p>
+    </div>
+
+    <!-- Compteurs & boutons -->
+    <h1>Count: <span id="count">0</span></h1>
+    <h2>Wood count: <span id="woodcount">0</span></h2>
+    <button id="planete-centrale">PLANETE CENTRALE</button>
+    <button id="planete-de-bois">PLANETE DE BOIS</button>
+    
+    <script>
+        var clickCount = 0;
+
+        // Quand on clique sur le bouton, on augmente les compteurs
+        facile.onClick('#planete-centrale', () => {
+            clickCount = clickCount + 1
+            facile.write("#count", clickCount)
+            console.log("Change click count: ", clickCount)
+        })
+
+        facile.write('#amelioration-1', 'Améliorer planète 1');
+       
+        var clickCountwood = 0;
+        facile.onClick('#planete-de-bois', () => {
+            clickCountwood = clickCountwood + 1
+            facile.write("#woodcount", clickCountwood)
+        })
+         
+        document.getElementById("planete-de-bois").style.display = "none";
+           
+        
+
+    </script>
+
+    
+</body>
+
+</html>
