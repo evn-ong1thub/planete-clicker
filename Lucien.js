@@ -1,59 +1,59 @@
 
 
-        var clickCountPierre = 0;
+        var clickCountStone = 0;
 
-        facile.onClick('#Planet-Pierre',() => {
-            clickCountPierre = clickCountPierre + 1
-            facile.write('#countPierre', clickCountPierre)
+        facile.onClick('#Planet-Stone',() => {
+            clickCountStone = clickCountStone + 1
+            facile.write('#countStone', clickCountStone)
         })
         
-        var clickCountBois  = 0;
-
-        facile.onClick('#Planet-Bois',() => {
-            clickCountBois = clickCountBois + 1
-            facile.write('#countBois', clickCountBois)
+        var clickCountWood  = 0;
+facile.hide('#Planet-Wood')
+        facile.onClick('#Planet-Wood',() => {
+            clickCountWood = clickCountWood + 1
+            facile.write('#countWood', clickCountwood)
         })
 
-        var clickCountEau = 0
-
-        facile.onClick('#Planet-Eau',() => {
-            clickCountEau = clickCountEau + 1
-            facile.write('#countEau', clickCountEau)
+        var clickCountWater = 0
+facile.hide('#Planet-Water')
+        facile.onClick('#Planet-Water',() => {
+            clickCountWater = clickCountWater + 1
+            facile.write('#countWater', clickCountWater)
         })
 
-        var clickCountCharbon = 0
-
-        facile.onClick('#Planet-Charbon',() => {
-            clickCountCharbon = clickCountCharbon + 1
-            facile.write('#countCharbon', clickCountCharbon)
+        var clickCountCoal = 0
+facile.hide('#Planet-Coal')
+        facile.onClick('#Planet-Coal',() => {
+            clickCountCoal = clickCountCoal + 1
+            facile.write('#countCoal', clickCountCoal)
         })
 
-        var clickCountFer = 0
-
-        facile.onClick('#Planet-Fer',() => {
-            clickCountFer = clickCountFer + 1
-            facile.write('#countFer', clickCountFer)
+        var clickCountIron = 0
+facile.hide('#Planet-Iron')
+        facile.onClick('#Planet-Iron',() => {
+            clickCountIron = clickCountIron + 1
+            facile.write('#countIron', clickCountIron)
         })
 
         var clickCountUranium = 0
-
+facile.hide('#Planet-Uranium')
         facile.onClick('#Planet-Uranium',() => {
            clickCountUranium = clickCountUranium + 1 
            facile.write('#countUranium', clickCountUranium)
         })
 
-        var clickCountObsidienne = 0
-
-        facile.onClick('#Planet-Obsidienne',() => {
-            clickCountObsidienne = clickCountObsidienne + 1
-            facile.write('#countObsidienne', clickCountObsidienne)
+        var clickCountObsidian = 0
+facile.hide('#Planet-Obsidian')
+        facile.onClick('#Planet-Obsidian',() => {
+            clickCountObsidian = clickCountObsidian + 1
+            facile.write('#countObsidian', clickCountObsidian)
         })
 
-        var clickCountDiamant = 0
-
-        facile.onClick('#Planet-Diamant',() => {
-            clickCountDiamant = clickCountDiamant + 1
-            facile.write('#countDiamant', clickCountDiamant)
+        var clickCountDiamond = 0
+facile.hide('#Planet-Diamond')
+        facile.onClick('#Planet-Diamond',() => {
+            clickCountDiamant = clickCountDiamond + 1
+            facile.write('#countDiamond', clickCountDiamond)
         })
 
     
