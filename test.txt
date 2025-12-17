@@ -85,3 +85,8 @@ facile.hide('#Planet-Bois')
             clickCountWater = clickCountWater + 1
             facile.write("#countEau", clickCountWater)
         });
+
+        <div id="upgradestone"> <button id='upgrade1'>UPGRADE STONE</button></div>
+ 
+//condition.
+ && clickCountStone.value == 20

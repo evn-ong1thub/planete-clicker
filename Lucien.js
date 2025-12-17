@@ -64,7 +64,7 @@ clickCountObsidian.onChange((newCount) => {
 var clickCountDiamond = facile.state(0)
 facile.hide('#Planet-Diamond')
 facile.onClick('#Planet-Diamond', () => {
-    clickCountDiamant.value = clickCountDiamond.value + 1
+    clickCountDiamond.value = clickCountDiamond.value + 1
 })
 clickCountDiamond.onChange((newCount) => {
     facile.write('#countDiamond', newCount)
