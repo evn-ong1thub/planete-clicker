@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test CSS</title>
+    <script src="https://cdn.jsdelivr.net/npm/facilejs/facile.umd.js"></script>
 
     <style>
         h1 {
@@ -14,7 +15,6 @@
         }
         body {
             background: repeat url("fond_espace.jpg");
-            border: 1px rgb(255, 0, 0) solid;
         }
         button {
             background-color:rgb(82, 82, 155)
@@ -22,91 +22,150 @@
         html {
             font-family:EMPLACEMENTs ; 
         }
+        img {
+            width: 80px;
+            transition: transform 0.5s;
+        }
+        img:hover {
+            transform: scale(1.2, 1.2);
+        }
+        img:active {
+            transform: scale(0.719);
+            transform: rotate(0.9turn);
+        }
+        #img-planet-Stone {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+
+            
+        #img-planet-Uranium {
+            position: absolute;
+            left: 30%;
+            top: 80%;
+        }
+
+        #img-planet-Iron {
+            position: absolute;
+            left: 70%;
+            top: 20%;
+        }
+
+        #img-planet-Wood {
+            position: absolute;
+            left: 66%;
+            top: 40%;
+        }
+
+        #img-planet-Coal {
+            position: absolute;
+            left: 78%;
+            top: 69%;
+        }
+
+        #img-planet-Diamond {
+            position: absolute;
+            left: 10%;
+            top: 21%;
+        }
+
+        #img-planet-Water {
+            position: absolute;
+            left:25% ;
+            top: 45%;
+        }
+
+        #img-planet-Obsidian {
+            position: absolute;
+            left: 40%;
+            top: 15%;
+        }
        
-    </style>
+    </style>s
 </head>
 <body>
     
 <h1>planet</h1>
 
-<h2>Count Stone: <span id='#countStone'>0</span></h2>
-<button id='#Planet-Stone'>Planet Stone</button>
 
-<h2>Count Wood: <span id='#countWood'>0</span></h2>
-<button id='#PLanet-Wood'>Planet Wood</button>
+<h2>Count Stone: <span id='countStone'>0</span></h2>
+<img id="img-planet-Stone" src="planète_pierre.png"/>
 
-<h2>Count Water: <span id='#countWater'>0</span></h2>
-<button id='#Planet-Water'>Planet Water</button>
+<h2>Count Wood: <span id='countWood'>0</span></h2>
+<img id="img-planet-Wood" src="planet_bois.png"/>
 
-<h2>Count Coal: <span id='#countCoal'>0</span></h2>
-<button id='#Planet-Coal'>Planet Coal</button>
+<h2>Count Water: <span id='countWater'>0</span></h2>
+<img id="img-planet-Water" src="planet_eau.png"/>
 
-<h2>Count Iron: <span id='#countIron'>0</span></h2>
-<button id='#Planet-Iron'>Planet Iron</button>
+<h2>Count Coal: <span id='countCoal'>0</span></h2>
+<img id="img-planet-Coal" src="planet_charbon.png"/>
 
-<h2>count Uranium: <span id='#countUranium'>0</span></h2>
-<button id='#Planet-Uranium'>Planet Uranium</button>
+<h2>Count Iron: <span id='countIron'>0</span></h2>
+<img id="img-planet-Iron" src="planet_métal.png"/>
 
-<h2>count Obsidian: <span id='#countObsidian'>0</span></h2>
-<button id='#Planet-Obsidian'>Planet Obsdian</button>
+<h2>count Uranium: <span id='countUranium'>0</span></h2>
+<img id="img-planet-Uranium" src="planet_uranium.png"/>
 
-<h2>count Diamond: <span id='#countDiamond'>0</span></h2>
-<button id='#Planet-Diamond'>Planet Diamond</button>
+<h2>Count countObsidian: <span id='countObsidian'>0</span></h2>
+<img id="img-planet-Obsidian" src="planet_obsidienne.png"/>
 
+<h2>count Diamond: <span id='countDiamond'>0</span></h2>
+<img id="img-planet-Diamond" src="planet_diamond.png"/>
 
 <script>
         var clickCountStone = 0;
 
-        facile.onClick('#Planet-Stone',() => {
+        facile.onClick('#img-planet-Stone',() => {
             clickCountStone = clickCountStone + 1
             facile.write('#countStone', clickCountStone)
         })
         
         var clickCountWood  = 0;
 
-        facile.onClick('#Planet-Wood',() => {
+        facile.onClick('#img-planet-Wood',() => {
             clickCountWood = clickCountWood + 1
             facile.write('#countWood', clickCountWood)
         })
 
         var clickCountWater = 0
 
-        facile.onClick('#Planet-Water',() => {
+        facile.onClick('#img-planet-Water',() => {
             clickCountWater = clickCountWater + 1
             facile.write('#countWater', clickCountWater)
         })
 
         var clickCountCoal = 0
 
-        facile.onClick('#Planet-Coal',() => {
+        facile.onClick('#img-planet-Coal',() => {
             clickCountCoal = clickCountCoal + 1
             facile.write('#countCoal', clickCountCoal)
         })
 
         var clickCountIron = 0
 
-        facile.onClick('#Planet-Iron',() => {
+        facile.onClick('#img-planet-Iron',() => {
             clickCountIron = clickCountIron + 1
             facile.write('#countIron', clickCountIron)
         })
 
         var clickCountUranium = 0
 
-        facile.onClick('#Planet-Uranium',() => {
+        facile.onClick('#img-planet-Uranium',() => {
            clickCountUranium = clickCountUranium + 1 
            facile.write('#countUranium', clickCountUranium)
         })
 
         var clickCountObsidian = 0
 
-        facile.onClick('#Planet-Obsidian',() => {
+        facile.onClick('#img-planet-Obsidian',() => {
             clickCountObsidian = clickCountObsidian + 1
             facile.write('#countObsidian', clickCountObsidian)
         })
 
         var clickCountDiamond = 0
 
-        facile.onClick('#Planet-Diamond',() => {
+        facile.onClick('#img-planet-Diamond',() => {
             clickCountDiamond = clickCountDiamond + 1
             facile.write('#countDiamond', clickCountDiamond)
         })
