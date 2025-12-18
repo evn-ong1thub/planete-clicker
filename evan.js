@@ -42,48 +42,48 @@ facile.hide('#upgradeobsidian');
 facile.hide('#upgradediamond');
 
 // CLICS 
-facile.onClick('#Planet-Stone', () => {
+facile.onClick('#img-planet-Stone', () => {
     clickCountStone.value += stoneUpgraded ? 2 : 1;
     if (!stoneUpgraded && clickCountStone.value >= 75) facile.show('#upgradestone');
 });
 
-facile.onClick('#Planet-Wood', () => {
+facile.onClick('#img-planet-Wood', () => {
     clickCountWood.value += woodUpgraded ? 2 : 1;
     // Vérifie si upgrade disponible : 75 Stone + 75 Wood
     if (!woodUpgraded && clickCountWood.value >= 75 && clickCountStone.value >= 75) facile.show('#upgradewood');
 });
 
-facile.onClick('#Planet-Water', () => {
+facile.onClick('#img-planet-Water', () => {
     clickCountWater.value += waterUpgraded ? 2 : 1;
     // Upgrade Water : 75 Stone + 75 Wood
     if (!waterUpgraded && clickCountWater.value >= 75 && clickCountStone.value >= 75 && clickCountWood.value >= 75) facile.show('#upgradewater');
 });
 
-facile.onClick('#Planet-Coal', () => {
+facile.onClick('#img-planet-Coal', () => {
     clickCountCoal.value += coalUpgraded ? 2 : 1;
     // Upgrade Coal : 75 Water + 75 Wood
     if (!coalUpgraded && clickCountCoal.value >= 75 && clickCountWater.value >= 75 && clickCountWood.value >= 75) facile.show('#upgradecoal');
 });
 
-facile.onClick('#Planet-Iron', () => {
+facile.onClick('#img-planet-Iron', () => {
     clickCountIron.value += ironUpgraded ? 2 : 1;
     // Upgrade Iron : 75 Coal + 75 Water
     if (!ironUpgraded && clickCountIron.value >= 75 && clickCountCoal.value >= 75 && clickCountWater.value >= 75) facile.show('#upgradeiron');
 });
 
-facile.onClick('#Planet-Uranium', () => {
+facile.onClick('#img-planet-Uranium', () => {
     clickCountUranium.value += uraniumUpgraded ? 2 : 1;
     // Upgrade Uranium : 75 Iron + 75 Coal
     if (!uraniumUpgraded && clickCountUranium.value >= 75 && clickCountIron.value >= 75 && clickCountCoal.value >= 75) facile.show('#upgradeuranium');
 });
 
-facile.onClick('#Planet-Obsidian', () => {
+facile.onClick('#img-planet-Obsidian', () => {
     clickCountObsidian.value += obsidianUpgraded ? 2 : 1;
     // Upgrade Obsidian : 75 Uranium + 75 Iron
     if (!obsidianUpgraded && clickCountObsidian.value >= 75 && clickCountUranium.value >= 75 && clickCountIron.value >= 75) facile.show('#upgradeobsidian');
 });
 
-facile.onClick('#Planet-Diamond', () => {
+facile.onClick('#img-planet-Diamond', () => {
     clickCountDiamond.value += diamondUpgraded ? 2 : 1;
     // Upgrade Diamond : 75 Obsidian + 75 Uranium
     if (!diamondUpgraded && clickCountDiamond.value >= 75 && clickCountObsidian.value >= 75 && clickCountUranium.value >= 75) facile.show('#upgradediamond');
