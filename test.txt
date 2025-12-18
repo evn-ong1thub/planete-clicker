@@ -90,3 +90,23 @@ facile.hide('#Planet-Bois')
  
 //condition.
  && clickCountStone.value == 20
+
+
+
+
+
+ facile.onClick('#upgradestone', () => {
+    if (clickCountStone.value >= 75 ) { 
+ clickCountStone.value = clickCountStone.value - 75}
+})
+clickCountStone.onChange((newCount) => {
+    facile.write('#countStone', newCount);
+});
+
+facile.onClick('#upgradewood', () => {
+    if (clickCountWood.value >= 75 ) { 
+ clickCountWood.value = clickCountWood.value - 75}
+})
+clickCountStone.onChange((newCount) => {
+    facile.write('#countWood', newCount);
+});
