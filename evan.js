@@ -177,3 +177,56 @@ facile.onClick('#upgradediamond', () => {
     }
 });
      //il ne reste plus qua modifier les valeurs a la fin (version finale du jeu)pour debloquer les upgrades
+
+     //  FIN DU JEU
+function checkWin() {
+    if (clickCountDiamond.value >= 1000) {
+        // Cacher toutes les planètes et upgrades
+        ['Stone','Wood','Water','Coal','Iron','Uranium','Obsidian','Diamond'].forEach(name => {
+            facile.hide('#Planet-' + name);
+            facile.hide('#upgrade' + name.toLowerCase());
+            facile.write('#count' + name, ''); // Optionnel : vide les compteurs
+        });
+
+        // Créer un message en plein écran
+        const message = document.createElement('div');
+        message.id = 'winMessage';
+        message.style.position = 'fixed';
+        message.style.top = '50%';
+        message.style.left = '50%';
+        message.style.transform = 'translate(-50%, -50%)';
+        message.style.fontSize = '36px';
+        message.style.fontWeight = 'bold';
+        message.style.textAlign = 'center';
+        message.style.color = 'white';
+        message.style.backgroundColor = 'rgba(0,0,0,0.8)';
+        message.style.padding = '50px';
+        message.style.borderRadius = '20px';
+        message.innerText = "WELL DONE, YOU CONQUERED SPACE,\nNOW IT IS PROTECTED BY YOU, GOOD LUCK!";
+        document.body.appendChild(message);
+    }
+}
+
+//  valeur du clic diamant pour finir le jeu 
+facile.onClick('#Planet-Diamond', () => {
+    clickCountDiamond.value += diamondUpgraded ? 2 : 1;
+    // Vérifie si upgrade Diamond est disponible
+    if (!diamondUpgraded && clickCountDiamond.value >= 75 && clickCountObsidian.value >= 75 && clickCountUranium.value >= 75) {
+        facile.show('#upgradediamond');
+    }
+    // Vérifie la condition de victoire
+    checkWin();
+});
+ 
+facile.onClick('#upgradediamond', () => {
+    if (!diamondUpgraded && clickCountDiamond.value >= 75 && clickCountObsidian.value >= 75 && clickCountUranium.value >= 75) {
+        clickCountDiamond.value -= 75;
+        clickCountObsidian.value -= 75;
+        clickCountUranium.value -= 75;
+        diamondUpgraded = true;
+        
+    }
+    // Vérifie la condition de victoire après l'achat
+    checkWin();
+});
+   //style du message de fin changable puisque le mien est laid malgré mes efforts :( 
