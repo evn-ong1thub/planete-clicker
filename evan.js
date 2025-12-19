@@ -24,13 +24,13 @@ let obsidianUpgraded = false;
 let diamondUpgraded = false;
 
 // HIDE PLANETES
-facile.hide('#Planet-Wood');
-facile.hide('#Planet-Water');
-facile.hide('#Planet-Coal');
-facile.hide('#Planet-Iron');
-facile.hide('#Planet-Uranium');
-facile.hide('#Planet-Obsidian');
-facile.hide('#Planet-Diamond');
+facile.hide('#img-planet-Wood');
+facile.hide('#img-planet-Water');
+facile.hide('#img-planet-Coal');
+facile.hide('#img-planet-Iron');
+facile.hide('#img-planet-Uranium');
+facile.hide('#img-planet-Obsidian');
+facile.hide('#img-planet-Diamond');
 
 facile.hide('#upgradestone');
 facile.hide('#upgradewood');
@@ -104,7 +104,7 @@ facile.onClick('#upgradestone', () => {
     if (!stoneUpgraded && clickCountStone.value >= 75) {
         clickCountStone.value -= 75;
         stoneUpgraded = true;
-        facile.show('#Planet-Wood');
+        facile.show('#img-planet-Wood');
     }
 });
 
@@ -113,7 +113,7 @@ facile.onClick('#upgradewood', () => {
         clickCountWood.value -= 75;
         clickCountStone.value -= 75;
         woodUpgraded = true;
-        facile.show('#Planet-Water');
+        facile.show('#img-planet-Water');
     }
 });
 
@@ -123,7 +123,7 @@ facile.onClick('#upgradewater', () => {
         clickCountStone.value -= 75;
         clickCountWood.value -= 75;
         waterUpgraded = true;
-        facile.show('#Planet-Coal');
+        facile.show('#img-planet-Coal');
     }
 });
 
@@ -133,7 +133,7 @@ facile.onClick('#upgradecoal', () => {
         clickCountWater.value -= 75;
         clickCountWood.value -= 75;
         coalUpgraded = true;
-        facile.show('#Planet-Iron');
+        facile.show('#img-planet-Iron');
     }
 });
 
@@ -143,7 +143,7 @@ facile.onClick('#upgradeiron', () => {
         clickCountCoal.value -= 75;
         clickCountWater.value -= 75;
         ironUpgraded = true;
-        facile.show('#Planet-Uranium');
+        facile.show('#img-planet-Uranium');
     }
 });
 
@@ -153,7 +153,7 @@ facile.onClick('#upgradeuranium', () => {
         clickCountIron.value -= 75;
         clickCountCoal.value -= 75;
         uraniumUpgraded = true;
-        facile.show('#Planet-Obsidian');
+        facile.show('#img-planet-Obsidian');
     }
 });
 
@@ -163,7 +163,7 @@ facile.onClick('#upgradeobsidian', () => {
         clickCountUranium.value -= 75;
         clickCountIron.value -= 75;
         obsidianUpgraded = true;
-        facile.show('#Planet-Diamond');
+        facile.show('#img-planet-Diamond');
     }
 });
 
@@ -208,7 +208,7 @@ function checkWin() {
 }
 
 //  valeur du clic diamant pour finir le jeu 
-facile.onClick('#Planet-Diamond', () => {
+facile.onClick('#img-planet-diamond', () => {
     clickCountDiamond.value += diamondUpgraded ? 2 : 1;
     // Vérifie si upgrade Diamond est disponible
     if (!diamondUpgraded && clickCountDiamond.value >= 75 && clickCountObsidian.value >= 75 && clickCountUranium.value >= 75) {
@@ -230,3 +230,4 @@ facile.onClick('#upgradediamond', () => {
     checkWin();
 });
    //style du message de fin changable puisque le mien est laid malgré mes efforts :( 
+
