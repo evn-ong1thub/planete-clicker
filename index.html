@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planet Clicker</title>
 
- <style>
+    <style>
         h1 {
-            color:rgb(255, 4, 4)
+            color: rgb(255, 4, 4)
         }
+
         h2 {
-            color:rgb(0, 255, 247)
+            color: rgb(0, 255, 247)
         }
+
         body {
             background: repeat url("fond_espace.jpg");
         }
+
         button {
-            background-color:rgb(82, 82, 155)
+            background-color: rgb(82, 82, 155)
         }
+
         html {
-            font-family:EMPLACEMENTs ; 
+            font-family: EMPLACEMENTs;
         }
+
         img {
             width: 80px;
             transition: transform 0.5s;
         }
+
         img:hover {
             transform: scale(1.2, 1.2);
         }
+
         img:active {
             transform: scale(0.719);
             transform: rotate(0.9turn);
         }
+
         #img-planet-Stone {
             position: absolute;
             left: 50%;
             top: 50%;
         }
 
-            
+
         #img-planet-Uranium {
             position: absolute;
             left: 30%;
@@ -71,7 +80,7 @@
 
         #img-planet-Water {
             position: absolute;
-            left:25% ;
+            left: 25%;
             top: 45%;
         }
 
@@ -80,53 +89,50 @@
             left: 40%;
             top: 15%;
         }
-       
     </style>
 
     <script src="https://cdn.jsdelivr.net/npm/facilejs@latest/facile.umd.js"> </script>
 </head>
+
 <body>
-  
-    
-    
-    
-
-
     <h1 id="planet">Planet Clicker</h1>
-<h2>Count Stone: <span id='countStone'>0</span></h2>                 
-<div id="upgradestone"><button id='upgrade1'>UPGRADE STONE</button></div>
-<img id="img-planet-Stone" src="planète_pierre.png"/>
+    <h2>Count Stone: <span id='countStone'>0</span></h2>
+    <div id="upgradestone"><button id='upgrade1'>UPGRADE STONE: 50 stone</button></div>
+    <img id="img-planet-Stone" src="planète_pierre.png" />
 
- <h2 id="woodcountertext">Count Wood: <span id='countWood'>0</span></h2>
-<div id="upgradewood"><button id=upgrade2>UPGRADE WOOD</button></div>
-<img id="img-planet-Wood" src="planet_bois.png"/>
+    <h2 id="woodcountertext">Count Wood: <span id='countWood'>0</span></h2>
+    <div id="upgradewood"><button id=upgrade2>UPGRADE WOOD: 200 stone, 75 wood</button></div>
+    <img id="img-planet-Wood" src="planet_bois.png" />
 
-<h2 id="watercountertext">Count Water: <span id='countWater'>0</span></h2>
-<div id="upgradewater"><button id=upgrade3>UPGRADE WATER</button></div>
-<img id="img-planet-Water" src="planet_eau.png"/>
+    <h2 id="watercountertext">Count Water: <span id='countWater'>0</span></h2>
+    <div id="upgradewater"><button id=upgrade3>UPGRADE WATER: 300 stone, 500 wood, 100 water</button></div>
+    <img id="img-planet-Water" src="planet_eau.png" />
 
-<h2 id="coalcountertext">Count Coal: <span id='countCoal'>0</span></h2>
-<div id="upgradecoal"><button id=upgrade4>UPGRADE COAL</button></div>
-<img id="img-planet-Coal" src="planet_charbon.png"/>
+    <h2 id="coalcountertext">Count Coal: <span id='countCoal'>0</span></h2>
+    <div id="upgradecoal"><button id=upgrade4>UPGRADE COAL: 600 wood, 800 water, 125 caol</button></div>
+    <img id="img-planet-Coal" src="planet_charbon.png" />
 
-<h2 id="ironcountertext">Count Iron: <span id='countIron'>0</span></h2>
-<div id="upgradeiron"><button id=upgrade6>UPGRADE IRON</button></div>
-<img id="img-planet-Iron" src="planet_métal.png"/>
+    <h2 id="ironcountertext">Count Iron: <span id='countIron'>0</span></h2>
+    <div id="upgradeiron"><button id=upgrade6>UPGRADE IRON: 1000 water, 1500 coal, 125 iron</button></div>
+    <img id="img-planet-Iron" src="planet_métal.png" />
 
-<h2 id="uraniumcountertext">Count Uranium: <span id='countUranium'>0</span></h2>
-<div id="upgradeuranium"><button id=upgrade7>UPGRADE URANIUM</button></div>
-<img id="img-planet-Uranium" src="planet_uranium.png"/>
+    <h2 id="uraniumcountertext">Count Uranium: <span id='countUranium'>0</span></h2>
+    <div id="upgradeuranium"><button id=upgrade7>UPGRADE URANIUM: 1700 coal, 1400 iron, 125 uranium</button></div>
+    <img id="img-planet-Uranium" src="planet_uranium.png" />
 
-<h2 id="obsidiancountertext">Count Osidian: <span id='countObsidian'>0</span></h2>
-<div id="upgradeobsidian"><button id=upgrade8>UPGRADE OBSIDIAN</button></div>
-<img id="img-planet-Obsidian" src="planet_obsidienne.png"/>
+    <h2 id="obsidiancountertext">Count Osidian: <span id='countObsidian'>0</span></h2>
+    <div id="upgradeobsidian"><button id=upgrade8>UPGRADE OBSIDIAN: 2000 iron, 1900 uranium, 175 obsidian </button>
+    </div>
+    <img id="img-planet-Obsidian" src="planet_obsidienne.png" />
 
-<h2 id="diamondcountertext">Count Diamond: <span id='countDiamond'>0</span></h2>
-<div id="upgradediamond"><button id=upgrade9>UPGRADE DIAMOND</button></div>
-<img id="img-planet-Diamond" src="planet_diamond.png"/>
+    <h2 id="diamondcountertext">Count Diamond: <span id='countDiamond'>0</span></h2>
+    <div id="upgradediamond"><button id=upgrade9>UPGRADE DIAMOND: 3000 uranium, 8000 obsidian, 200 diamond</button>
+    </div>
+    <img id="img-planet-Diamond" src="planet_diamond.png" />
 
-<script src="Lucien.js"></script>
-<script src="evan.js"></script>
-         
+    <script src="Lucien.js"></script>
+    <script src="evan.js"></script>
+
 </body>
+
 </html>
