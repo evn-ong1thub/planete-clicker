@@ -208,7 +208,7 @@ function checkWin() {
 }
 
 //  valeur du clic diamant pour finir le jeu 
-facile.onClick('#img-planet-diamond', () => {
+facile.onClick('#img-planet-Diamond', () => {
     clickCountDiamond.value += diamondUpgraded ? 2 : 1;
     // Vérifie si upgrade Diamond est disponible
     if (!diamondUpgraded && clickCountDiamond.value >= 75 && clickCountObsidian.value >= 75 && clickCountUranium.value >= 75) {
